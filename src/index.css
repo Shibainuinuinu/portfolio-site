@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+/* START OF NAV BAR THINGS */
+
+header {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+.navLinks a{
+  margin-right: 20px;
+}
+
+nav a {
+  margin: 0;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  padding-left: 20px;
+}
+
+nav a:hover{
+  opacity: 0.8;
+}
+
+/* END OF NAV BAR THINGS */
+
+
+body {
+  background-color: #2C3E50 ;
+
+}
+
+.main {
+  margin: 5vh 5vw 0;
+}
+
+.homepagesections {
+  background-color: #1a232d;
+  margin-bottom: 20vh;
+  font-size: 15px;
+  width: 40%;
+  height: auto;
+  padding: 1vw 1vw;
+  box-shadow: 10px 5px 5px #1a232d;
+}
+
+.homepagesections h1 {
+  font-size: 40px;
+}
+
+.homepagesections button {
+  display: block;
+  background-color: #2C3E50;
+  margin: 30% auto 0;
+  font-size: 25px;
+  padding: 5% 10%;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.homepagesections.right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.homepagesections.left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Basic styling for the container */
+.main {
+  position: relative; /* Required for absolute positioning of child elements */
+}
+
+/* Define the animation for all child elements */
+.main * {
+  /* Your styles for all child elements go here */
+  /* For example: */
+  opacity: 0;
+  transform: translateY(20px);
+
+  /* CSS Animation */
+  animation-name: fadeUp;
+  animation-duration: 3s; /* Specify the duration (in seconds) for the animation */
+  animation-timing-function: ease; /* Easing function for smoothness */
+  animation-fill-mode: forwards; /* Keeps the final animation state after it's finished */
+}
+
+/* Define the animation keyframes */
+@keyframes fadeUp {
+  from {
+    /* Initial state */
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    /* Final state */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
