@@ -3,12 +3,38 @@
   padding:0;
   box-sizing: border-box;
   color: white;
-  font-family: Roboto, sans-serif;
+  font-family:  Helvetica, sans-serif;
+}
+
+.main {
+  position: relative; 
+}
+
+.main *, .homepagesections {
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation-name: fadeUp;
+  animation-duration: 3s; 
+  animation-timing-function: ease; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* START OF NAV BAR THINGS */
 
 header {
+  /* background-color: rgb(0,0,0,0.6); */
   padding: 20px;
   width: 100%;
   display: flex;
@@ -35,9 +61,30 @@ nav a:hover{
 
 /* END OF NAV BAR THINGS */
 
+.AboutMe {
+  background-image: url(./images/dark-sand.jpeg);
+  padding: 20vh 5vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.homepagesections.blackHomePageBox {
+  display: inline-block;
+  background-color: rgb(0,0,0,0.8);
+  box-shadow: 10px 5px 5px rgb(0,0,0,0.7);
+  padding: 10vh 2vw;
+  width: 50%;
+
+}
+
+.homepagesections.blackHomePageBox > * {
+  text-align: center;
+  line-height: 130%;
+}
 
 body {
-  background-color: #2C3E50 ;
+  background-color: #1a232d;
 
 }
 
@@ -46,27 +93,37 @@ body {
 }
 
 .homepagesections {
-  background-color: #1a232d;
+  background-color: #2C3E50;
   margin-bottom: 20vh;
   font-size: 15px;
-  width: 40%;
+  width: 40vw;
   height: auto;
-  padding: 1vw 1vw;
-  box-shadow: 10px 5px 5px #1a232d;
+  padding: 2vw 1vw;
+  box-shadow: 10px 5px 5px #161d24;
+  border-radius: 0.5rem;
 }
 
 .homepagesections h1 {
   font-size: 40px;
 }
 
+.homepagesections p {
+  margin: 5% 5% auto;
+  text-align: left;
+}
+
 .homepagesections button {
   display: block;
-  background-color: #2C3E50;
+  background-color: #1a232d;
   margin: 30% auto 0;
-  font-size: 25px;
-  padding: 5% 10%;
+  font-size: 20px;
+  padding: 3% 8%;
   border: none;
   border-radius: 0.5rem;
+}
+
+.homepagesections button:hover {
+  background-color: rgb(26, 35, 45, 0.5);
 }
 
 .homepagesections.right {
@@ -77,38 +134,5 @@ body {
 .homepagesections.left {
   margin-left: 0;
   margin-right: auto;
-}
-
-/* Basic styling for the container */
-.main {
-  position: relative; /* Required for absolute positioning of child elements */
-}
-
-/* Define the animation for all child elements */
-.main * {
-  /* Your styles for all child elements go here */
-  /* For example: */
-  opacity: 0;
-  transform: translateY(20px);
-
-  /* CSS Animation */
-  animation-name: fadeUp;
-  animation-duration: 3s; /* Specify the duration (in seconds) for the animation */
-  animation-timing-function: ease; /* Easing function for smoothness */
-  animation-fill-mode: forwards; /* Keeps the final animation state after it's finished */
-}
-
-/* Define the animation keyframes */
-@keyframes fadeUp {
-  from {
-    /* Initial state */
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    /* Final state */
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 

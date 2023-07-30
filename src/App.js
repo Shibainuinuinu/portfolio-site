@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import Header from './components/Header';
 import HomePageBoxes from './components/HomePageBoxes';
+import AboutMe from './components/AboutMe';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
         <Header />
+        <AboutMe />
         <div className='main'>
           <HomePageBoxes title="Projects" description="These are my projects" pos='left'/>
           <HomePageBoxes title="Projects" description="These are my projects" pos='right'/>
