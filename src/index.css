@@ -200,8 +200,8 @@ body, html {
   
 }
 
-.val {
+.singleproject {
   display: flex;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-bottom: 20vh;
 }
