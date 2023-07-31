@@ -1,6 +1,7 @@
 import HomePageBoxes from "./HomePageBoxes"
+import ImageCarousel from "./ImageCarousel"
 
-const AboutMe = () => {
+const AboutMe = ({ carousel }) => {
     const aboutMeDescription = `Hi, I'm Kelvin! I’m a native of San Francisco and a current 
     junior attending Lowell High School. Previously, I have been an intern at Mission Bit and Code 
     Tenderloin where I learned the fundamentals of web development and coding. I am actively studying 
@@ -14,7 +15,7 @@ const AboutMe = () => {
   return (
     <div className="AboutMe">
         <HomePageBoxes title="Kelvin Fang" pos="left" description={aboutMeDescription} isBlack={true}  />
-        <img src="" alt="pic_of_me"/>
+        <ImageCarousel images={carousel}/>
     </div>
   )
 }
