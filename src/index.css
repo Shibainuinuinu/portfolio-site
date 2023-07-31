@@ -10,7 +10,7 @@
   position: relative; 
 }
 
-.main *, .homepagesections {
+.main > *, .homepagesections, .aboutMeCarouselStyle  {
   opacity: 0;
   transform: translateY(20px);
 
@@ -102,10 +102,9 @@ body, html {
 
 .homepagesections {
   background-color: #00000072;
-  margin-bottom: 20vh;
   font-size: 15px;
   width: 40vw;
-  height: auto;
+  height: fit-content;
   padding: 2vw 1vw;
   box-shadow: 10px 5px 5px #0f0f0f;
   border-radius: 0.5rem;
@@ -123,7 +122,7 @@ body, html {
 .homepagesections button, .carousel-button {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
-  margin: 30% auto 0;
+  margin: 5% auto 0;
   font-size: 20px;
   padding: 3% 8%;
   border: none;
@@ -199,4 +198,10 @@ body, html {
   padding: 2% 5%;
   border-radius: 0.5em;
   
+}
+
+.val {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
 }

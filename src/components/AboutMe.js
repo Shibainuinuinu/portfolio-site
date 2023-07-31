@@ -18,7 +18,9 @@ const AboutMe = ({ carousel }) => {
         style= {{
           margin: 0, 
         }} />
-        <ImageCarousel images={carousel}/>
+        <div className='aboutMeCarouselStyle'>
+          <ImageCarousel images={carousel}/>
+        </div>
     </div>
   )
 }

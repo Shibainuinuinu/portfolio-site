@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-const ImageCarousel = ({ images }) => {
+const ImageCarousel = ({ images, style }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const getNext = () => {
         const nextIndex = (currentIndex + 1);
@@ -20,7 +20,7 @@ const ImageCarousel = ({ images }) => {
 
   return (
     <section aria-label="Newest Photos">
-        <div className='carousel'>
+        <div className='carousel' style={style}>
             <button className='carousel-button prev' onClick={getPrev}>&#8656;</button>
             <button className='carousel-button next' onClick={getNext}>&#8658;</button>
             <ul className='carouselRemoveLiStyles'>
@@ -28,7 +28,7 @@ const ImageCarousel = ({ images }) => {
                     return (
                         <li key={index} className={`slide`} {...(currentIndex === index && { 'data-active': '' })}
                         >
-                            <img className="carouselImageSize" src={image.src} alt={image.alt} />
+                            <img src={image.src} alt={image.alt} />
                         </li>
                     )
                 })}
