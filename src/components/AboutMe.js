@@ -14,7 +14,10 @@ const AboutMe = ({ carousel }) => {
 
   return (
     <div className="AboutMe">
-        <HomePageBoxes title="Kelvin Fang" pos="left" description={aboutMeDescription} isBlack={true}  />
+        <HomePageBoxes title="Kelvin Fang" pos="left" description={aboutMeDescription} isBlack={true} 
+        style= {{
+          margin: 0, 
+        }} />
         <ImageCarousel images={carousel}/>
     </div>
   )

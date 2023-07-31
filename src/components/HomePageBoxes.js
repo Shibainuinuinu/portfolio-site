@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HomePageBoxes = ({ title, description, pos, isBlack }) => {
+const HomePageBoxes = ({ title, description, pos, isBlack, style }) => {
   const determinePos =(pos) => {
     if (pos==="right")
       return "right";
@@ -10,7 +10,7 @@ const HomePageBoxes = ({ title, description, pos, isBlack }) => {
       return "middle";
   }
   return (
-    <div className={`homepagesections ${determinePos(pos)} ${isBlack ? 'blackHomePageBox' : ''}`}> 
+    <div className={`homepagesections ${determinePos(pos)} ${isBlack ? 'blackHomePageBox' : ''}`} style={style}> 
         <h1>{title}</h1>
         <p>{description}</p>
         {title !== "Kelvin Fang" && <button className="homePageButtons">{title.toLowerCase()}</button>}

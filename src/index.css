@@ -40,6 +40,7 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.764);
 }
 
 .navLinks a{
@@ -61,7 +62,8 @@ nav a:hover{
 /* END OF NAV BAR THINGS */
 
 .AboutMe {
-  background-image: url(./images/dark-sand.jpeg);
+  background-image: url(./images/bluenightsky.jpeg);
+  background-size: 100% 100%;
   padding: 20vh 5vw;
   display: flex;
   justify-content: space-around;
@@ -82,8 +84,10 @@ nav a:hover{
   line-height: 130%;
 }
 
-body {
-  background-color: #1a232d;
+body, html {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #1a1a1a, #404040);
 }
 
 .main {
@@ -97,13 +101,13 @@ body {
 }
 
 .homepagesections {
-  background-color: #2C3E50;
+  background-color: #00000072;
   margin-bottom: 20vh;
   font-size: 15px;
   width: 40vw;
   height: auto;
   padding: 2vw 1vw;
-  box-shadow: 10px 5px 5px #161d24;
+  box-shadow: 10px 5px 5px #0f0f0f;
   border-radius: 0.5rem;
 }
 
@@ -118,7 +122,7 @@ body {
 
 .homepagesections button, .carousel-button {
   display: block;
-  background-color: #1a232d;
+  background-color: rgba(0, 0, 0, 0.5);
   margin: 30% auto 0;
   font-size: 20px;
   padding: 3% 8%;
@@ -127,7 +131,7 @@ body {
 }
 
 .homepagesections button:hover {
-  background-color: rgb(26, 35, 45, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .homepagesections.right {
@@ -139,11 +143,6 @@ body {
   margin-left: 0;
   margin-right: auto;
 }
-
-/* .carouselImageSize {
-  width: 30%;
-  height: auto;
-} */
 
 .carousel {
   width: 25vw;

@@ -31,11 +31,12 @@ function App() {
         <AboutMe carousel={AboutMeCarousel}/>
         <div className='main'>
           <div className='projects'>
-            <HomePageBoxes title="Projects" description="These are my projects" pos='middle'/>
+            <HomePageBoxes title="Projects" description="These are my projects" pos='middle' 
+            style={{
+
+            }}/>
           </div>
-          {/* <HomePageBoxes title="Projects" description="These are my projects" pos='right'/> */}
-          {/* <HomePageBoxes title="Projects" description="These are my projects" pos='left'/> */}
-          <HomePageBoxes title="Projects" description="These are my projects" pos='middle'/>
+          <HomePageBoxes title="Connect" description="These are my projects" pos='middle'/>
         </div>
     </div>
   );
