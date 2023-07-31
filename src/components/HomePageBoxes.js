@@ -1,4 +1,5 @@
 import React from 'react'
+import HomePageButtons from './HomePageButtons';
 
 const HomePageBoxes = ({ title, description, pos, isBlack, style }) => {
   const determinePos =(pos) => {
@@ -13,7 +14,7 @@ const HomePageBoxes = ({ title, description, pos, isBlack, style }) => {
     <div className={`homepagesections ${determinePos(pos)} ${isBlack ? 'blackHomePageBox' : ''}`} style={style}> 
         <h1>{title}</h1>
         <p>{description}</p>
-        {title !== "Kelvin Fang" && <button className="homePageButtons">{title.toLowerCase()}</button>}
+        {title !== "Kelvin Fang" && <HomePageButtons title={title}/>}
     </div>  
   )
 }

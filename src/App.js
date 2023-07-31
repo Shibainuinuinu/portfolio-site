@@ -13,15 +13,15 @@ function App() {
   const [AboutMeCarousel, setAboutMeCarousel] = useState([
     {
       index: 0,
-      src: kelvinpic1,
-      alt: "kelvinpic1",
-      'data-active': true,
-    },
-    {
-      index: 1,
       src: kelvinpic2,
       alt: "kelvinpic2",
       'data-active': false,
+    },
+    {
+      index: 1,
+      src: kelvinpic1,
+      alt: "kelvinpic1",
+      'data-active': true,
     },
   ])
 
@@ -30,11 +30,9 @@ function App() {
         <Header />
         <AboutMe carousel={AboutMeCarousel}/>
         <div className='main'>
+          <h1 className="projectHeading">Projects</h1>
           <div className='projects'>
-            <HomePageBoxes title="Projects" description="These are my projects" pos='middle' 
-            style={{
-
-            }}/>
+            <HomePageBoxes title="Projects" description="These are my projects" pos='left'/>
           </div>
           <HomePageBoxes title="Connect" description="These are my projects" pos='middle'/>
         </div>
