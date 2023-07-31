@@ -1,15 +1,33 @@
 import React from 'react'
+import { useState } from 'react';
 
 const ImageCarousel = ({ images }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const getNext = () => {
+        const nextIndex = (currentIndex + 1);
+        if (nextIndex ===images.length)
+            setCurrentIndex(0);
+        else
+            setCurrentIndex(nextIndex);
+    }
+    const getPrev = () => {
+        const prevIndex = (currentIndex - 1);
+        if (prevIndex ===-1)
+            setCurrentIndex(images.length-1);
+        else
+            setCurrentIndex(prevIndex);
+    }
+
   return (
     <section aria-label="Newest Photos">
         <div className='carousel'>
-            <button className='carousel-button prev'>&#8656;</button>
-            <button className='carousel-button next'>&#8658;</button>
-            <ul>
+            <button className='carousel-button prev' onClick={getPrev}>&#8656;</button>
+            <button className='carousel-button next' onClick={getNext}>&#8658;</button>
+            <ul className='carouselRemoveLiStyles'>
                 {images.map((image, index)=> {
                     return (
-                        <li key={index} className="slide" {...(index === 0 && { 'data-active': '' })}>
+                        <li key={index} className={`slide`} {...(currentIndex === index && { 'data-active': '' })}
+                        >
                             <img className="carouselImageSize" src={image.src} alt={image.alt} />
                         </li>
                     )

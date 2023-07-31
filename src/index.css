@@ -34,7 +34,6 @@
 /* START OF NAV BAR THINGS */
 
 header {
-  /* background-color: rgb(0,0,0,0.6); */
   padding: 20px;
   width: 100%;
   display: flex;
@@ -85,11 +84,16 @@ nav a:hover{
 
 body {
   background-color: #1a232d;
-
 }
 
 .main {
   margin: 5vh 5vw 0;
+}
+
+.homepagesections.middle {
+  margin-right: auto;
+  margin-left: auto;
+  width: 80%;
 }
 
 .homepagesections {
@@ -112,7 +116,7 @@ body {
   text-align: left;
 }
 
-.homepagesections button {
+.homepagesections button, .carousel-button {
   display: block;
   background-color: #1a232d;
   margin: 30% auto 0;
@@ -164,3 +168,31 @@ body {
 .slide[data-active] {
   opacity: 1;
 }
+
+.carousel-button {
+  z-index: 2000;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+  width: 25%;
+  background-color: black;
+}
+
+.carousel-button.prev {
+  left: -10px;
+  bottom: -10px; 
+}
+
+.carousel-button.next {
+  right: -10px;
+  bottom: -10px; 
+}
+
+.carouselRemoveLiStyles {
+  list-style-type: none;
+}
+
+
+
+
+

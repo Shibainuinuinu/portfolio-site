@@ -12,6 +12,7 @@ const Header = () => {
                     <a href="pages/music.html">About Me</a>
                     <a href="pages/movies.html">Projects</a>
                     <a href="index.html">Connect</a>
+
                 </div>
             </nav>
         </div>
