@@ -101,7 +101,7 @@ body, html {
   background-color: #00000072;
   font-size: 15px;
   width: 50vw;
-  height: 40vh;
+  height: auto;
   padding: 2vw 1vw;
   box-shadow: 10px 5px 5px #0f0f0f;
   border-radius: 0.5rem;
