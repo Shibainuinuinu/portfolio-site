@@ -4,15 +4,12 @@ import { useState } from 'react'
 import ImageCarousel from './ImageCarousel';
 import HomePageBoxes from './HomePageBoxes'
 
-
 import valPic1 from '../images/games/valpic1.png'
 import valPic2 from '../images/games/valpic2.png'
 import valPic3 from '../images/games/valpic3.png'
 import valPic4 from '../images/games/valpic4.png'
 import wAndC1 from '../images/wAndC/wAndC1.png'
 import wAndC2 from '../images/wAndC/wAndC2.png'
-
-
 
 const Projects = () => {
     const [valorantCarousel, setValorantCarousel] = useState([
@@ -67,17 +64,25 @@ const Projects = () => {
       including the OpenWeatherApp API and Yelp Fusion API. It suggests clothes based
       on the the current weather in SF and suggests local businesses to purchase these 
       clothes from.`
+      const  valStyles = {
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${valPic2})`,
+        objectFit: 'cover',
+        objectPosition: 'center',
+      }
+      const wAndCStyles = {
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${wAndC1})`,
+        objectFit: 'cover',
+        objectPosition: 'center',     
+      }
   return (
     <>
         <h1 className="projectHeading">Projects</h1>
         <div className='projects'>
             <div className='singleproject'>
-                    <HomePageBoxes title="Valorant Website" description={valDescrip} pos='left'/>
-                    <ImageCarousel images={valorantCarousel} style={{width: '40vw', marginLeft: '1vw'}}/>
+                <HomePageBoxes title="Valorant Website" description={valDescrip} pos='middle' canGrow={true} style={valStyles}/>
             </div>
             <div className='singleproject'>
-                <ImageCarousel images={wAndCCarousel} style={{width: '40vw', marginRight: '1vw', objectPosition: ''}}/>   
-                <HomePageBoxes title="Weather And Clothes App" description={wAndC} pos='right'/>
+                <HomePageBoxes title="Weather And Clothes App" description={wAndC} pos='middle' canGrow={true} style={wAndCStyles}/>
             </div>
         </div>
     </>

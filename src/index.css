@@ -10,14 +10,11 @@
   position: relative; 
 }
 
-.main > *, .homepagesections, .aboutMeCarouselStyle  {
-  opacity: 0;
-  transform: translateY(20px);
 
-  animation-name: fadeUp;
-  animation-duration: 3s; 
-  animation-timing-function: ease; 
-  animation-fill-mode: forwards;
+/* smt with keyframes forwards (last keyframe) causes hover specifcally for transform: scale() to not work properly */
+/* .main > *, .homepagesections, .aboutMeCarouselStyle  {
+  opacity: 0;
+  animation: fadeUp 3s ease forwards;
 }
 
 @keyframes fadeUp {
@@ -29,7 +26,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /* START OF NAV BAR THINGS */
 
@@ -97,18 +94,37 @@ body, html {
 .homepagesections.middle {
   margin-right: auto;
   margin-left: auto;
-  width: 80%;
+  width: 50%;
 }
 
 .homepagesections {
   background-color: #00000072;
   font-size: 15px;
-  width: 40vw;
-  height: fit-content;
+  width: 50vw;
+  height: 40vh;
   padding: 2vw 1vw;
   box-shadow: 10px 5px 5px #0f0f0f;
   border-radius: 0.5rem;
+  transition: transform 1s ease, background-color 1s ease, height 1s ease, width 1s ease;
 }
+
+
+.homepagesections.growing-box  > * {
+  opacity: 0.5;
+  font-weight: bold;
+  transition: opacity 1s ease;
+}
+
+
+.growing-box:hover{
+  transform: scale(1.2);
+  background-color: #00000086;
+}
+
+.growing-box:hover >*{
+  opacity: 1; 
+}
+
 
 .homepagesections h1 {
   font-size: 40px;
@@ -117,6 +133,7 @@ body, html {
 .homepagesections p {
   margin: 5% 5% auto;
   text-align: left;
+  display: inline-block;
 }
 
 .homepagesections button, .carousel-button {

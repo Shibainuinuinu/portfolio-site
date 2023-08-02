@@ -10,6 +10,9 @@ import kelvinpic1 from './images/kelvinpic1.jpg'
 import kelvinpic2 from './images/kelvinpic2.jpeg'
 
 
+import githubicon from './images/githubicon.png'
+
+
 function App() {
   const [AboutMeCarousel, setAboutMeCarousel] = useState([
     {
@@ -25,14 +28,20 @@ function App() {
       'data-active': false,
     },
   ])
-
+  const contentButtons = [
+    {
+      index: 0,
+      name: 'Github',
+      icon: githubicon,
+    }
+  ]
   return (
     <div className="App">
         <Header />
         <AboutMe carousel={AboutMeCarousel}/>
         <div className='main'>
           <Projects/>
-          <HomePageBoxes title="Connect" description="These are my projects" pos='middle' style={{marginBottom: '5vh'}}/>
+          <HomePageBoxes title="Connect" description="These are my projects" pos='middle' style={{marginBottom: '5vh'}}  buttonDetails={contentButtons}/>
         </div>
     </div>
   );
