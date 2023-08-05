@@ -1,6 +1,10 @@
 import React from 'react'
 
 const Header = () => {
+    const scroll = (target) => {
+        const section = document.querySelector(target);
+        section.scrollIntoView({behavior: 'smooth'});
+    } 
   return (
     <header>
         <div>
@@ -9,9 +13,9 @@ const Header = () => {
         <div>
             <nav>
                 <div className="navLinks">
-                    <a href="pages/music.html">About Me</a>
-                    <a href="pages/movies.html">Projects</a>
-                    <a href="index.html">Connect</a>
+                    <a onClick={() => scroll(".AboutMe")}>About Me</a>
+                    <a onClick={() => scroll(".main")}>Projects</a>
+                    <a onClick={() => scroll(".AboutMe")}>Connect</a>
 
                 </div>
             </nav>
